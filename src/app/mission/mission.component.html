@@ -1,0 +1,29 @@
+<!-- <div class="container">
+    <div class="card" *ngFor="let mission of missionDetials; index as i">
+        <img src={{mission.links.mission_patch}} alt="Person" class="card__image">
+        <p class="card__name">{{mission.mission_name}}#{{mission.flight_number}}</p>
+        <div class="grid-container">
+
+            <div>Mission Ids:</div>
+            <div>Launch Year:{{mission.launch_year}}</div>
+            <div>Successsful Launch:{{mission.launch_success}}</div>
+            <div>Successful Landing:{{mission.launch_landing}}</div>
+
+        </div>
+
+
+    </div>
+</div> -->
+<div class="card-container">
+    <ul>
+        <li *ngFor="let mission of missionDetials">
+            <img src={{mission.links.mission_patch}} alt="Person" class="card__image">
+            <h5 class="card__name">{{mission.mission_name}}#{{mission.flight_number}}</h5>
+            <h5>Mission Ids:</h5>
+            <h5>Launch Year:{{mission.launch_year}}</h5>
+            <h5>Successsful Launch:{{mission.launch_success}}</h5>
+            <h5>Successful Landing:{{mission.launch_landing}}</h5>
+        </li>
+    </ul>
+    <h4>Developed By Anuroop Deshpande</h4>
+</div>

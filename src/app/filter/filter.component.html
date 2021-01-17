@@ -1,0 +1,41 @@
+<div class="filter-container">
+    <h2>Filters</h2>
+    <h3>Launch Year</h3>
+    <hr>
+    <!-- <div class="years-flex"> -->
+    <div>
+        <div class="even-odd-years">
+            <div class="even-years">
+                <button *ngFor="let even of missionEvenYears" (click)="filterByParams({launch_year: even})">
+                    {{even}}</button>
+
+            </div>
+            <div class="odd-years">
+                <button *ngFor="let odd of missionOddYears" (click)="filterByParams({launch_year: odd})">
+                    {{odd}}</button>
+
+            </div>
+
+        </div>
+        <div class="launch-land">
+            <h3>Successful Launch</h3>
+            <hr>
+            <div>
+                <button (click)="filterByParams({launch_success: true})">True</button>
+                <button (click)="filterByParams({launch_success: false})">False</button>
+            </div>
+            <h3>Successful Landing</h3>
+            <hr>
+            <div>
+                <button (click)="filterByParams({land_success: true})">True</button>
+                <button (click)="filterByParams({land_success: false})">False</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- <app-child [childMessage]="parentMessage"></app-child> -->

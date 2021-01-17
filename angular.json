@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "space-mission"
+  "defaultProject": "space-mission",
+  "cli": {
+    "analytics": false
+  }
 }
