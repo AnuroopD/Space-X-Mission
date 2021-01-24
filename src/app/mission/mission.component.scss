@@ -193,8 +193,16 @@ h5 {
   margin: 16px;
 }
 
+.footer {
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   background-color: rgb(238, 238, 238);
+}
 
-ul {
+.mission-ids {
   // list-style-type: none;
   list-style: none;
   margin: 0;
@@ -204,7 +212,7 @@ ul {
   /// display: flex;
   /// flex-wrap: wrap;
 
-  li {
+  .mission-detial {
       background: white;
       // padding: 1em;
       margin: 8px;
@@ -231,3 +239,12 @@ ul {
     border-radius: 9px;
     background: rgb(238, 238, 238);
 }
+
+.mission-id {
+  text-align: left;
+}
+
+// .mission-id-list {
+//   margin: 0;
+//   padding: 0;
+// }

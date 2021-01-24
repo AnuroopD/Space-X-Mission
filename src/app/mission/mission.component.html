@@ -15,15 +15,22 @@
     </div>
 </div> -->
 <div class="card-container">
-    <ul>
-        <li *ngFor="let mission of missionDetials">
+    <ul class="mission-ids">
+        <li *ngFor="let mission of missionDetials" class="mission-detial">
             <img src={{mission.links.mission_patch}} alt="Person" class="card__image">
             <h5 class="card__name">{{mission.mission_name}}#{{mission.flight_number}}</h5>
             <h5>Mission Ids:</h5>
-            <h5>Launch Year:{{mission.launch_year}}</h5>
-            <h5>Successsful Launch:{{mission.launch_success}}</h5>
-            <h5>Successful Landing:{{mission.launch_landing}}</h5>
+            <!-- <ul class="mission-id-list">
+                <li *ngFor="let id of mission.mission_id" class="mission-id">
+                    {{id}}
+                </li>
+            </ul> -->
+            <h5>Launch Year: {{mission.launch_year}}</h5>
+            <h5>Successsful Launch: {{mission.launch_success}}</h5>
+            <h5>Successful Landing: {{mission?.rocket?.first_stage?.cores[0]?.land_success}}</h5>
         </li>
     </ul>
-    <h4>Developed By Anuroop Deshpande</h4>
+    <div class="footer">
+        <p>Developed By : Anuroop Deshpande</p>
+    </div>
 </div>

@@ -6,13 +6,15 @@
     <div>
         <div class="even-odd-years">
             <div class="even-years">
-                <button *ngFor="let even of missionEvenYears" (click)="filterByParams({launch_year: even})">
-                    {{even}}</button>
+                <button *ngFor="let even of missionEvenYears; index as i" [ngClass]="{buttonClicked: even.isActive}"
+                    (click)="filterByParams('launch_year',even) ; updateIsActiveClass(even.value)">
+                    {{even.value}}</button>
 
             </div>
             <div class="odd-years">
-                <button *ngFor="let odd of missionOddYears" (click)="filterByParams({launch_year: odd})">
-                    {{odd}}</button>
+                <button *ngFor="let odd of missionOddYears; index as i" [ngClass]="{buttonClicked: odd.isActive}"
+                    (click)="filterByParams('launch_year',odd) ; updateIsActiveClass(odd.value)">
+                    {{odd.value}}</button>
 
             </div>
 
@@ -20,15 +22,19 @@
         <div class="launch-land">
             <h3>Successful Launch</h3>
             <hr>
-            <div>
-                <button (click)="filterByParams({launch_success: true})">True</button>
-                <button (click)="filterByParams({launch_success: false})">False</button>
+            <div class="launch">
+                <button [ngClass]="{'buttonClicked' : missionLaunch[0].isActive}"
+                    (click)="filterByParams('launch_success', missionLaunch[0]) ; updateIsActive('missionLaunch',0)">True</button>
+                <button [ngClass]="{'buttonClicked' : missionLaunch[1].isActive}"
+                    (click)="filterByParams('launch_success', missionLaunch[1]) ; updateIsActive('missionLaunch',1)">False</button>
             </div>
             <h3>Successful Landing</h3>
             <hr>
-            <div>
-                <button (click)="filterByParams({land_success: true})">True</button>
-                <button (click)="filterByParams({land_success: false})">False</button>
+            <div class="land">
+                <button [ngClass]="{'buttonClicked' : missionLand[0].isActive}"
+                    (click)="filterByParams('land_success',  missionLand[0]) ; updateIsActive('missionLand',0)">True</button>
+                <button [ngClass]="{'buttonClicked' : missionLand[1].isActive}"
+                    (click)="filterByParams('land_success', missionLand[1]); updateIsActive('missionLand',1)">False</button>
             </div>
 
         </div>

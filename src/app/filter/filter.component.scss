@@ -41,9 +41,13 @@ button {
     
 }
 
-button:focus {
+.buttonClicked {
     background: green;
+
 }
+// button:active {
+//     background: green;
+// }
 
 .even-odd-years {
     display: grid;
@@ -62,4 +66,12 @@ button:focus {
     }
 }
 
+.land, .launch {
+    display: grid;
+    grid-template-columns: 50% auto;
+    height: 100%;
+    button {
+        margin: 16px auto;
+    }
+}
 
